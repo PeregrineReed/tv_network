@@ -11,8 +11,8 @@ class Show
   end
 
   def total_salary
-    @characters.inject(0) do |total, actor|
-      total + actor.salary
+    @characters.sum do |character|
+      character.salary
     end
   end
 
