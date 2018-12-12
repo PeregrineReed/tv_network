@@ -8,4 +8,8 @@ class Network
     @shows = []
   end
 
+  def add_show(title)
+    @shows << title
+  end
+
 end
