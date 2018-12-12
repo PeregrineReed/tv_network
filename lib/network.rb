@@ -22,4 +22,14 @@ class Network
     best_paid.actor
   end
 
+  def payroll
+    payroll_list = {}
+    @shows.each do |show|
+      show.characters.each do |character|
+        payroll_list[character.actor] = character.salary
+      end
+    end
+    payroll_list
+  end
+
 end
